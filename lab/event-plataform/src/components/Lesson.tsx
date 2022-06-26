@@ -8,9 +8,13 @@
 // gap = espaçamento entre o conteúdo
 // Para ajustar o ícone =  flex, items-center e gap-2
 // {props.title} = variável javascript sendo exibida dentro do html (necessário uso de chaves)
+// group = define um grupo de elementos
+// group-hover: = A propriedade será aplicado a todo o grupo (no caso abaixo, a div inteira)
+// Link to = usado para refenciar rotas por meio do react-router-dom | Substitui o <a href="" />
 import { isPast, format } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
 import { CheckCircle, Lock } from 'phosphor-react';
+import { Link } from 'react-router-dom';
 
 // Define as propriedades do component desse component
 interface LessonProps {
@@ -28,11 +32,11 @@ export function Lesson(props: LessonProps) {
     });
 
     return (
-    <a href="#">
+    <Link to={`/event/lesson/${props.slug}`} className="group">
         <span className="text-gray-300">
         {isLessonAvailableDateFormat}
         </span>
-        <div className="rounded border border-gray-500  p-4 mt-2">
+        <div className="rounded border border-gray-500  p-4 mt-2 group-hover:border-green-500">
             <header className="flex items-center justify-between">
                 {isLessonAvailable ? (
                     <span className="text-sm text-blue-500 flex items-center gap-2">
@@ -46,13 +50,13 @@ export function Lesson(props: LessonProps) {
                 </span>
                 )}
                 <span className="text-xs rounded py-[0.125rem] px-2 text-white border border-green-300 font-bold">
-                {props.type === 'live' ? 'AO VIVO' : 'AULA PRÁTICA'}
+                {props.type === 'live' ? 'AO VIVO' :  'AULA PRÁTICA'}
                 </span>
             </header>
             <strong className="text-gray-200 mt-5 block">
             {props.title}
             </strong>
         </div>
-    </a>   
+    </Link>   
     )
 }
