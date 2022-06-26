@@ -5,7 +5,7 @@ import { Event } from "../pages/Event";
 
 export function Router() {
     return (
-    <Routes>
+        <Routes>
         {/* <Route path="/" element={<h1>Página Home ainda não criada</h1>} /> */}
         
         {/* Rota temporária para o nosso "home" */}
