@@ -59,7 +59,7 @@ export function Video(props: VideoProps) {
                 {/* Player de Vídeo */}
                 <div className="bg-white w-full h-full max-w-[1100px] max-h-[60vh] aspect-video">
                     <Player>
-                        <Youtube videoId={data.lesson.videoId}/>
+                        <Youtube videoId={data.lesson.videoId} key={data.lesson.videoId}/>
                         <DefaultUi />
                     </Player>
                 </div>
