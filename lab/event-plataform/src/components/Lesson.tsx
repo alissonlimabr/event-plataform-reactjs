@@ -11,10 +11,11 @@
 // group = define um grupo de elementos
 // group-hover: = A propriedade será aplicado a todo o grupo (no caso abaixo, a div inteira)
 // Link to = usado para refenciar rotas por meio do react-router-dom | Substitui o <a href="" />
+import classnames from 'classnames';
 import { isPast, format } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
 import { CheckCircle, Lock } from 'phosphor-react';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 // Define as propriedades do component desse component
 interface LessonProps {
@@ -26,20 +27,41 @@ interface LessonProps {
 
 // exporta a função e recebe as propriedades de LessonProps
 export function Lesson(props: LessonProps) {
+
+    const { slug } = useParams<{slug : string }>()
+
     const isLessonAvailable = isPast(props.avaliableAT);
     const isLessonAvailableDateFormat = format(props.avaliableAT, "EEEE ' • ' d ' de ' MMMM ' • ' k'h'mm", {
         locale: ptBR,
     });
+
+    // isActiveLesson corresponde à aula ativa da url
+    const isActiveLesson = slug === props.slug
 
     return (
     <Link to={`/event/lesson/${props.slug}`} className="group">
         <span className="text-gray-300">
         {isLessonAvailableDateFormat}
         </span>
-        <div className="rounded border border-gray-500  p-4 mt-2 group-hover:border-green-500">
+
+        
+
+        {/* Alternativa1 para css condicional no tailwind. Se a lesson corresponder à aula ativa (props.slug), modifica a cor de fundo da div 
+            
+            <div className={`rounded border border-gray-500  p-4 mt-2 group-hover:border-green-500 ${isActiveLesson ? 'bg-green-500' : ''}`}>
+        
+            Mas é preferível utilizar a biblioteca classenames (npm i classnames)
+        */}
+
+        <div className={classnames('rounded border border-gray-500  p-4 mt-2 group-hover:border-green-500', {
+            'bg-green-500' : isActiveLesson
+        })}>
             <header className="flex items-center justify-between">
                 {isLessonAvailable ? (
-                    <span className="text-sm text-blue-500 flex items-center gap-2">
+                    <span className={classnames('text-sm flex items-center gap-2', {
+                        'text-white' : isActiveLesson,
+                        'text-blue-500' : !isActiveLesson
+                    })}>
                     <CheckCircle size={20}/>
                     Conteúdo Liberado
                     </span>
@@ -49,11 +71,24 @@ export function Lesson(props: LessonProps) {
                     Em Breve
                 </span>
                 )}
-                <span className="text-xs rounded py-[0.125rem] px-2 text-white border border-green-300 font-bold">
+                <span className={classnames('text-xs rounded py-[0.125rem] px-2 text-white border border-green-300 font-bold', {
+                    'border-white' : isActiveLesson,
+                    'border-green-300' : !isActiveLesson
+                })}>
                 {props.type === 'live' ? 'AO VIVO' :  'AULA PRÁTICA'}
                 </span>
             </header>
-            <strong className="text-gray-200 mt-5 block">
+            {/* 
+                className={classnames('css que nunca muda'), {
+                    css : condicional,
+                    css:  !condicional // diferente do valor
+                }}
+            */}
+            <strong className={classnames(' mt-5 block', {
+                'text-white' : isActiveLesson,
+                'text-gray-200' : !isActiveLesson
+
+})}>
             {props.title}
             </strong>
         </div>

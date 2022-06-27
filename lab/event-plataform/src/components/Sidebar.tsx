@@ -24,6 +24,7 @@ interface GetLessonsQueryResponse {
     }>
 }
 
+// Função que que faz a busca das lessons
 export function Sidebar() {
     const { data } = useQuery<GetLessonsQueryResponse>(GET_LESSONS_QUERY)
 
