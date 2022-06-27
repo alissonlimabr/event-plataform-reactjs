@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply bg-gray-900 text-gray-100;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* CMS - Content Management System */
+
+/* Wordpress não é Headless. Ele traz tanto o painel de Admin, tanto quanto a parte visual do front-end (temas). O Back-End e o Front-End são o mesmo sistema*/
+
+/* HEadless CMS: Painel de ADMIN ( dados fornecidos através de uma API REST ou GraphQL */
+
+/* React que consome essa api do CMS */
+
+
+/* No GraphQL:
+
+    query = buscar dados
+    
+    mutation = criar, alterar, deletar dados*/
