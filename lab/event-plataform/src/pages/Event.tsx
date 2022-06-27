@@ -21,9 +21,6 @@ export function Event() {
             : <div className="flex-1" />}
             <Sidebar />
         </main>
-        <footer>
-            <Footer />
-        </footer>
         </div>
         )
 }
