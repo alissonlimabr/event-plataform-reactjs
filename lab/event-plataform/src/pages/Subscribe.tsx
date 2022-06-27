@@ -18,6 +18,7 @@
 import { gql, useMutation } from "@apollo/client";
 import { useState, FormEvent } from "react";
 import { useNavigate } from "react-router-dom";
+import { Footer } from "../components/Footer";
 import { Logo } from "../components/Logo";
 import imgMockup from "/src/assets/code-mockup.png"
 
@@ -105,7 +106,11 @@ export function Subscribe() {
             </div>
             
             <img src= {imgMockup} className="mt-10" alt="" />
+            <footer className="w-full">
+                <Footer />
+            </footer>
         </div>
+        
         
     )
 }
