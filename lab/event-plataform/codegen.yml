@@ -1,0 +1,18 @@
+# Criar ou atualizar o arquivo de configuração com graphql
+
+schema: https://api-sa-east-1.graphcms.com/v2/cl4qkly2m45lk01z41nkde2kn/master
+documents: './src/graphql/**/*.graphql'
+generates:
+  ./src/graphql/generated.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-react-apollo
+    config:
+      reactApolloVersion: 3
+      # withHooks cria automaticamente funções hook (ex:useQuery)
+      withHooks: true
+      # Desabilita padrão HOC (padrão de classes no react)
+      withHOC: false
+      # Desabilita criar um componente para cada query
+      withComponent: false

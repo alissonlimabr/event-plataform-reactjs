@@ -23,37 +23,12 @@
 import { DefaultUi, Player, Youtube } from "@vime/react";
 import { CaretRight, DiscordLogo, FileArrowDown, Lightning } from "phosphor-react";
 
-import { gql, useQuery } from "@apollo/client";
 import '@vime/core/themes/default.css';
+import { useGetLessonBySlugQuery } from "../graphql/generated";
 
-const GET_LESSON_BY_SLUG_QUERY = gql `
-    query GetLessonBySlug ($slug: String) {
-    lesson(where: {slug: $slug}) {
-        title
-        videoId
-        description
-        teacher {
-            bio
-            avatarURL
-            name
-        }
-    }
-}
-`
 
-// Interace que representa a resposta de GET_LESSON_BY_SLUG
-interface GetLessonBySlugResponse {
-    lesson: {
-        title: string;
-        videoId: string;
-        description: string;
-        teacher: {
-            bio: string;
-            avatarURL: string;
-            name: string;
-        }
-    }
-}
+
+
 
 // Recupera lessonSlug do Event.tsx
 interface VideoProps {
@@ -62,13 +37,13 @@ interface VideoProps {
 
 export function Video(props: VideoProps) {
     // Query com variáveis
-    const { data } = useQuery<GetLessonBySlugResponse>(GET_LESSON_BY_SLUG_QUERY, {
+    const { data } = useGetLessonBySlugQuery({
         variables: {
-            slug: props.lessonSlug,
+            slug: props.lessonSlug
         }
     })
 
-    if (!data) {
+    if (!data || !data.lesson)  {
         return (
         <div className="flex-1">
             <p>Carregando...</p>
@@ -103,23 +78,27 @@ export function Video(props: VideoProps) {
                             {data.lesson.description}
                         </p>
 
-                        {/* Avatar do GitHub */}
+                    {/* Se a data.lesson.teacher existir, exibe as informações */}
+                    {data.lesson.teacher && (
+                            // Avatar do GitHub
                         <div className="flex items-center gap-4 mt-6">
-                            <img 
-                            className="h-16 w-16 rounded-full border-2 border-blue-500"
-                            src={data.lesson.teacher.avatarURL}
-                            alt=""
-                            />
-                            {/* Biografia */}
-                            <div className="leading-relaxed">
-                            <strong className="font-bold text-2xl block">
-                                {data.lesson.teacher.name}
-                            </strong>
-                            <span className="text-gray-200 text-sm block">           
-                                {data.lesson.teacher.bio}    
-                            </span>
-                            </div>
+                        <img 
+                        className="h-16 w-16 rounded-full border-2 border-blue-500"
+                        src={data.lesson.teacher.avatarURL}
+                        alt=""
+                        />
+                        {/* Biografia */}
+                        <div className="leading-relaxed">
+                        <strong className="font-bold text-2xl block">
+                            {data.lesson.teacher.name}
+                        </strong>
+                        <span className="text-gray-200 text-sm block">           
+                            {data.lesson.teacher.bio}    
+                        </span>
                         </div>
+                    </div>
+                    )}
+
                     </div>
 
                     <div className="flex flex-col gap-4">

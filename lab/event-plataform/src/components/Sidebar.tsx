@@ -1,32 +1,11 @@
-import { gql, useQuery } from "@apollo/client";
+import { useGetLessonsQuery } from "../graphql/generated";
 import { Lesson } from "./Lesson";
 
-// Fazendo uma query para o graphCMS
-const GET_LESSONS_QUERY = gql`
-    query MyQuery {
-        lessons(orderBy: availableAt_ASC, stage: PUBLISHED) {
-        id
-        lessonType
-        availableAt
-        title
-        slug
-        }
-    }
-`
-
-interface GetLessonsQueryResponse {
-    lessons: Array<{
-        id: string;
-        title: string;
-        slug: string;
-        availableAt: string;
-        lessonType: 'live' | 'class';
-    }>
-}
 
 // Função que que faz a busca das lessons
+// Ignite Lab - Day5 : método usando graphql - codegen
 export function Sidebar() {
-    const { data } = useQuery<GetLessonsQueryResponse>(GET_LESSONS_QUERY)
+    const { data } = useGetLessonsQuery();
 
     return (
         // w-[348px] = Quando não tem um tamanho pré-definido, passamos em px dentro de um array

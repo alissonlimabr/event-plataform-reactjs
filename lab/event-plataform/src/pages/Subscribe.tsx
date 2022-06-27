@@ -19,6 +19,7 @@ import { gql, useMutation } from "@apollo/client";
 import { useState, FormEvent } from "react";
 import { useNavigate } from "react-router-dom";
 import { Logo } from "../components/Logo";
+import imgMockup from "/src/assets/code-mockup.png"
 
 // conexão com graphCMS
 const CREATE_SUBSCRIBER_MUTATION = gql `
@@ -57,7 +58,6 @@ export function Subscribe() {
 
 
     return (
-        
         <div className="min-h-screen bg-blur bg-cover bg-no-repeat flex flex-col items-center">
             {/* Div que contém a descrição e o formulário de inscrição */}
             <div className="w-full max-w-[1100px] flex items-center justify-between mt-20 mx-auto">
@@ -104,7 +104,8 @@ export function Subscribe() {
                 </div>
             </div>
             
-            <img src="/src/assets/code-mockup.png" className="mt-10" alt="" />
+            <img src= {imgMockup} className="mt-10" alt="" />
         </div>
+        
     )
 }

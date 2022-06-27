@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
 import { Sidebar } from "../components/Sidebar";
 import { Video } from "../components/Video";
@@ -6,7 +7,7 @@ import { Video } from "../components/Video";
 export function Event() {
 
     // useParams<{nome: tipo}>()
-    const { slug } = useParams<{ slug: string}>()
+    const { slug } = useParams<{ slug: string}>();
 
     return (
         // Flex-col = flex-direction: column. Os elementos ficam um embaixo do outro
@@ -20,6 +21,9 @@ export function Event() {
             : <div className="flex-1" />}
             <Sidebar />
         </main>
+        <footer>
+            <Footer />
+        </footer>
         </div>
         )
 }
