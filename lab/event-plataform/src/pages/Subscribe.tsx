@@ -106,11 +106,14 @@ export function Subscribe() {
             </div>
             
             <img src= {imgMockup} className="mt-10" alt="" />
-            <footer className="w-full">
-                <Footer />
-            </footer>
+            
+            <div className="w-full">
+            <Footer />
+            </div>
+
         </div>
         
         
     )
+
 }
