@@ -25,6 +25,7 @@ import { CaretRight, DiscordLogo, FileArrowDown, Lightning } from "phosphor-reac
 
 import '@vime/core/themes/default.css';
 import { useGetLessonBySlugQuery } from "../graphql/generated";
+import { Footer } from "./Footer";
 
 
 
@@ -163,8 +164,12 @@ export function Video(props: VideoProps) {
                         <CaretRight size={24} />
                     </div>
                 </a>
+
                 </div>
             </div>
-        </div>
+            <footer>
+                <Footer />  
+            </footer>
+            </div>
         )
 }
