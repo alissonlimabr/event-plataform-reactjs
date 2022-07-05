@@ -59,6 +59,7 @@ export function Subscribe() {
 
 
     return (
+    <div>
         <div className="min-h-screen bg-blur bg-cover bg-no-repeat flex flex-col items-center">
             {/* Div que contém a descrição e o formulário de inscrição */}
             <div className="w-full max-w-[1100px] flex items-center justify-between mt-20 mx-auto">
@@ -104,15 +105,12 @@ export function Subscribe() {
                     </form>
                 </div>
             </div>
-            
             <img src= {imgMockup} className="mt-10" alt="" />
-            
-            <div className="w-full">
-            <Footer />
-            </div>
-
         </div>
-        
+        <div>
+        <Footer />
+        </div>
+    </div>
         
     )
 
