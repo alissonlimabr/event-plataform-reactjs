@@ -106,12 +106,16 @@ export function Video(props: VideoProps) {
                         
                     {/* BOTOES */}
 
-                    <a href="https://discord.com/invite/rocketseat" className="p-4 text-sm bg-green-500 flex items-center rounded font-bold uppercase gap-2 justify-center hover:bg-green-700 transition-colors">
+                    <a href="https://discord.com/invite/rocketseat" 
+                    target="_blank" rel="noopener noreferrer" 
+                    className="p-4 text-sm bg-green-500 flex items-center rounded font-bold uppercase gap-2 justify-center hover:bg-green-700 transition-colors">
                         <DiscordLogo size={24}/>
                         Comunidade do Discord
                     </a>
 
-                    <a href="https://www.rocketseat.com.br/ignite" className="p-4 text-sm border border-blue-500 text-blue-500 flex items-center rounded font-bold uppercase gap-2 justify-center hover:bg-blue-500 transition-colors hover:text-gray-900">
+                    <a href="https://www.rocketseat.com.br/ignite" 
+                    target="_blank" rel="noopener noreferrer" 
+                    className="p-4 text-sm border border-blue-500 text-blue-500 flex items-center rounded font-bold uppercase gap-2 justify-center hover:bg-blue-500 transition-colors hover:text-gray-900">
                         <Lightning size={24} />
                         Acesse o conteúdo
                     </a>
@@ -121,7 +125,9 @@ export function Video(props: VideoProps) {
                 {/* Cards de material complementar */}
 
                 <div className="gap-8 mt-20 grid grid-cols-2 justify-items-center">
-                <a href="https://www.figma.com/file/tETz4ULxeBob2ep5r1srdS/Plataforma-de-evento---Ignite-Lab-(Community)?node-id=24%3A2" className="bg-gray-700 rounded overflow-hidden flex items-stretch gap-6 hover:bg-gray-600 transition-colors">
+                <a href="https://www.figma.com/file/tETz4ULxeBob2ep5r1srdS/Plataforma-de-evento---Ignite-Lab-(Community)?node-id=24%3A2" 
+                target="_blank" rel="noopener noreferrer" 
+                className="bg-gray-700 rounded overflow-hidden flex items-stretch gap-6 hover:bg-gray-600 transition-colors">
                 
                                 
                     {/* div box esquera do elemento(ícone) */}
@@ -143,7 +149,9 @@ export function Video(props: VideoProps) {
                     </div>
                 </a>
 
-                <a href="https://drive.google.com/drive/folders/1mxWnvlqmH7MbVRv2Na9xFNgCQCygM1iR" className="bg-gray-700 rounded overflow-hidden flex items-stretch gap-6 hover:bg-gray-600 transition-colors">
+                <a href="https://drive.google.com/drive/folders/1mxWnvlqmH7MbVRv2Na9xFNgCQCygM1iR" 
+                target="_blank" rel="noopener noreferrer" 
+                className="bg-gray-700 rounded overflow-hidden flex items-stretch gap-6 hover:bg-gray-600 transition-colors">
                 
                                 
                     {/* div box esquera do elemento(ícone) */}
