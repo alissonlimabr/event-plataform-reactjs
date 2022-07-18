@@ -1,12 +1,17 @@
 <div align="center">
 <img src="https://user-images.githubusercontent.com/101370736/179435747-a41e7186-b5bf-4f81-a7ac-bd9d8daf04a8.png">
-<img src="https://user-images.githubusercontent.com/101370736/179438772-2af80866-731a-4516-aeab-4473d6bf621e.jpeg">
+<img src="https://user-images.githubusercontent.com/101370736/179622979-5e11a3da-55bb-4bf6-83a8-1d253ae1e78e.jpeg">
 </div>
-
 
 <h1 align="center">ReactJs - Ignite Lab </h1>
 
-<p align="center">O Ignite Lab foi um projeto da Rocketseat que ocorreu entre os dias 20 e 26 de junho de 2022, focado em ReactJs.
+<p align="center">
+ <a href="#-como-executar-o-projeto">Como executar</a> • 
+ <a href="#-tecnologias">Tecnologias</a> • 
+ <a href="#-autor">Autor</a> • 
+</p>
+
+<p align="center"> O Ignite Lab foi um projeto da Rocketseat que ocorreu entre os dias 20 e 26 de junho de 2022, focado em ReactJs.
 Nesse período, os alunos desenvolveram uma website, apelidado de Event Platform, cujo objetivo é permitir que pessoas se cadastrem em um evento e assistam as aulas dentro da plataforma.
 </p>
 
@@ -48,11 +53,11 @@ Nesse período, os alunos desenvolveram uma website, apelidado de Event Platform
 
 
 > 😮‍💨 Ufa! Essa parte é importante, pois o token do schema disponiblizado não dispõe previamente dessas permissões. Elas são necessárias para que o cadastro de usuários
-possa ser realizado na página Subscribe, além permitir que a página Event tenha acesso as Lessons publicadas!
+possa ser realizado na página Subscribe, além permitir que a página Event tenha acesso as Lessons(aulas) publicadas!
  
-> 😉 Por falar em Lessons, o schema que você clonou está vazio. O que acha de criar uma nova Lesson?
+> 😉 Por falar em Lessons, esse schema ainda não contém aulas cadastradas. O que acha de criar uma nova?
 
->🤝 Uma dica: Para cadastrar as aulas, você terá que acessar o Content. Agora é com você!
+> 🤝 Uma dica: Para cadastrar as aulas, você terá que acessar o Content. Agora é com você!
 
  
  ### 🎲 Rodando a aplicação
@@ -103,3 +108,13 @@ As seguintes ferramentas foram usadas na construção do projeto:
 -   **[Vite](https://vitejs.dev/)**
 
 
+## 👨‍🎓 Autor
+
+<a href="https://github.com/alissonlimabr">
+ <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/101370736?s=400&u=00839cadc5eaa54e04b68f6efbc1582eedf4e080&v=4" width="100px;" alt=""/>
+ <br />
+ <sub><b>Alisson Lima</b></sub></a> <a href="https://github.com/alissonlimabr" title="GitHub">🚀</a>
+ <br />
+
+[![Twitter Badge](https://img.shields.io/badge/-@amlxd5-1ca0f1?style=flat-square&labelColor=1ca0f1&logo=twitter&logoColor=white&link=https://twitter.com/amlxd5)](https://twitter.com/amlxd5) [![Linkedin Badge](https://img.shields.io/badge/-Alisson-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/alisson-ml/)](https://www.linkedin.com/in/alisson-ml/) 
+[![Gmail Badge](https://img.shields.io/badge/-amlxd5@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:amlxd5@gmail.com)](mailto:amlxd5@gmail.com)
