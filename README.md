@@ -9,6 +9,7 @@
  <a href="#-como-executar-o-projeto">Como executar</a> • 
  <a href="#-tecnologias">Tecnologias</a> • 
  <a href="#-autor">Autor</a> • 
+ <a href="#-licença">Licença</a>
 </p>
 
 <p align="center"> O Ignite Lab foi um projeto da Rocketseat que ocorreu entre os dias 20 e 26 de junho de 2022, focado em ReactJs.
@@ -118,3 +119,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 [![Twitter Badge](https://img.shields.io/badge/-@amlxd5-1ca0f1?style=flat-square&labelColor=1ca0f1&logo=twitter&logoColor=white&link=https://twitter.com/amlxd5)](https://twitter.com/amlxd5) [![Linkedin Badge](https://img.shields.io/badge/-Alisson-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/alisson-ml/)](https://www.linkedin.com/in/alisson-ml/) 
 [![Gmail Badge](https://img.shields.io/badge/-amlxd5@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:amlxd5@gmail.com)](mailto:amlxd5@gmail.com)
+
+## 📝 Licença
+
+Esse projeto é licenciado pelo [MIT](./LICENSE).
