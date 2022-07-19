@@ -12,8 +12,8 @@
  <a href="#-licença">Licença</a>
 </p>
 
-<p align="center"> O Ignite Lab foi um projeto da Rocketseat que ocorreu entre os dias 20 e 26 de junho de 2022, focado em ReactJs.
-Nesse período, os alunos desenvolveram uma website, apelidado de Event Platform, cujo objetivo é permitir que pessoas se cadastrem em um evento e assistam as aulas dentro da plataforma.
+<p align="center"> O Ignite Lab foi um projeto da Rocketseat que ocorreu entre os dias 20 e 26 de junho de 2022, focado em ReactJs/Typescript.
+Nesse período, os alunos desenvolveram um website, apelidado de Event Platform, cujo objetivo é permitir que pessoas se cadastrem em um evento e assistam as aulas dentro da plataforma.
 </p>
 
 
@@ -30,7 +30,7 @@ Nesse período, os alunos desenvolveram uma website, apelidado de Event Platform
 
 - Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas: [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/).
  
- Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/). Se você já utilize ele, baixe as seguintes extensões:
+ Além disto é bom ter um editor para trabalhar com o código, como [VSCode](https://code.visualstudio.com/). Se você já utiliza ele, baixe as seguintes extensões:
  [GraphQL](https://marketplace.visualstudio.com/items?itemName=GraphQL.vscode-graphql),
  [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss),
  [PostCSS Language Support](https://marketplace.visualstudio.com/items?itemName=csstools.postcss)
@@ -40,7 +40,7 @@ Nesse período, os alunos desenvolveram uma website, apelidado de Event Platform
 
   1. Crie uma conta no [GraphCMS](https://app.graphcms.com/) e clone o schema fornecido pela Rockeseat [clicando aqui](http://rseat.in/lab-graphcms).
 
-  2. Depois de clonar o schema, abra-o e clique em "project setting" (engrenagem). Em seguida, navegue até API Access e copie e salve sua Content API.
+  2. Depois de clonar o schema, abra-o e clique em "project setting" (engrenagem). Em seguida, navegue até "API Access", copie e salve sua "Content API".
 
   3. Após isso, role a página até a seção "Permanent Auth Tokens", edite seu token e crie 3 novas permissões para o model Subscriber:
 
@@ -53,8 +53,7 @@ Nesse período, os alunos desenvolveram uma website, apelidado de Event Platform
   4. Copie e salve o value do seu token.
 
 
-> 😮‍💨 Ufa! Essa parte é importante, pois o token do schema disponiblizado não dispõe previamente dessas permissões. Elas são necessárias para que o cadastro de usuários
-possa ser realizado na página Subscribe, além permitir que a página Event tenha acesso as Lessons(aulas) publicadas!
+> 😮‍💨 Ufa! Essa parte é importante, pois o token do schema disponiblizado não dispõe previamente dessas permissões. Elas são necessárias para que o cadastro de usuários possa ser realizado na página Subscribe, além permitir que a página Event tenha acesso as Lessons(aulas) publicadas!
  
 > 😉 Por falar em Lessons, esse schema ainda não contém aulas cadastradas. O que acha de criar uma nova?
 
